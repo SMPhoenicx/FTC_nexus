@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6927776E2FA5348A001AC249 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6927776D2FA5348A001AC249 /* FirebaseAnalytics */; };
+		692777702FA5348A001AC249 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6927776F2FA5348A001AC249 /* FirebaseAuth */; };
+		692777722FA5348A001AC249 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 692777712FA5348A001AC249 /* FirebaseFirestore */; };
+		69DF52C22FA10BE9009093EE /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 69DF52C12FA10BE9009093EE /* Neumorphic */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		69DF52A12F9FF695009093EE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6927776E2FA5348A001AC249 /* FirebaseAnalytics in Frameworks */,
+				692777722FA5348A001AC249 /* FirebaseFirestore in Frameworks */,
+				692777702FA5348A001AC249 /* FirebaseAuth in Frameworks */,
+				69DF52C22FA10BE9009093EE /* Neumorphic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +123,10 @@
 			);
 			name = "FTC Nexus";
 			packageProductDependencies = (
+				69DF52C12FA10BE9009093EE /* Neumorphic */,
+				6927776D2FA5348A001AC249 /* FirebaseAnalytics */,
+				6927776F2FA5348A001AC249 /* FirebaseAuth */,
+				692777712FA5348A001AC249 /* FirebaseFirestore */,
 			);
 			productName = "FTC Nexus";
 			productReference = 69DF52902F9FF68F009093EE /* FTC Nexus.app */;
@@ -195,6 +210,10 @@
 			);
 			mainGroup = 69DF52872F9FF68E009093EE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				69DF52C02FA10BE9009093EE /* XCRemoteSwiftPackageReference "neumorphic" */,
+				6927776C2FA5348A001AC249 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 69DF52912F9FF68F009093EE /* Products */;
 			projectDirPath = "";
@@ -404,6 +423,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +453,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +579,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6927776C2FA5348A001AC249 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.1;
+			};
+		};
+		69DF52C02FA10BE9009093EE /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6927776D2FA5348A001AC249 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6927776C2FA5348A001AC249 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		6927776F2FA5348A001AC249 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6927776C2FA5348A001AC249 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		692777712FA5348A001AC249 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6927776C2FA5348A001AC249 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		69DF52C12FA10BE9009093EE /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69DF52C02FA10BE9009093EE /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 69DF52882F9FF68E009093EE /* Project object */;
 }
